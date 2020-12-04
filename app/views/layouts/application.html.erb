@@ -15,6 +15,30 @@
   </head>
 
   <body>
+  <nav>
+      <ul>
+          <li>
+            <a href="/user_sign_in">
+              Sign in
+            </a>
+          </li>
+          <li>
+            <a href="/user_sign_up">
+              Sign up
+            </a>
+          </li>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+      </ul>
+  </nav>
     <%= yield %>
+    <footer>
+      <small>
+        This product uses the TMDb API but is not endorsed or certified by TMDb.
+      </small>
+    </footer>
   </body>
 </html>
