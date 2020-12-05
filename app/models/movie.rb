@@ -18,7 +18,7 @@ has_many(:roles, { :class_name => "Character", :foreign_key => "movie_id", :depe
 
 has_many(:bookmarks, { :class_name => "Bookmark", :foreign_key => "movie_id", :dependent => :destroy })
 
-belongs_to(:director, { :required => false, :class_name => "Director", :foreign_key => "director_id", :counter_cache => :filmography_count })
+belongs_to(:director, { :required => false, :class_name => "Director", :foreign_key => "director_id"})
 
 has_many(:cast, { :through => :roles, :source => :actor })
 
