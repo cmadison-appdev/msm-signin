@@ -10,4 +10,13 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
+  belongs_to(:movie, { :required => false, :class_name => "Movie", :foreign_key => "movie_id", :counter_cache => :roles_count })
+
+  belongs_to(:actor, { :required => false, :class_name => "Actor", :foreign_key => "actor_id", :counter_cache => :roles_count })
+
+  validates(:name, { :presence => true })
+
+  validates(:movie_id, { :presence => true })
+
+  validates(:actor_id, { :presence => true })
 end

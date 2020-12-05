@@ -9,13 +9,6 @@
 #  user_id    :integer
 #
 class Bookmark < ApplicationRecord
-  # def user
-  #   my_user_id = self.user_id
-
-  #   matching_users = User.where({ :id => my_user_id })
-
-  #   the_user = matching_users.at(0)
-
-  #   return the_user
-  # end
+  belongs_to(:movie, { :required => false, :class_name => "Movie", :foreign_key => "movie_id" })
+  belongs_to(:user, { :required => false, :class_name => "User", :foreign_key => "user_id"})
 end
